@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { PUBLIC_APPLICATION_NAME } from '$env/static/public'
+	import LinkButton from '$lib/components/Buttons/LinkButton.svelte'
+
 	let { user } = $props();
 </script>
 
@@ -85,18 +87,12 @@
 					</button>
 				</div>
 			{:else}
-				<a
-					href="/authentication/login"
-					class="transform rounded-full bg-blue-500 px-6 py-2 text-white transition-all duration-300 hover:scale-105 hover:bg-blue-600 hover:shadow-lg"
-				>
+				<LinkButton isPrimary={true} href="/authentication/login">
 					Login
-				</a>
-				<a
-					href="/authentication/signup"
-					class="bg-white-500 border-1 transform rounded-full border-blue-500 px-6 py-2 text-blue-500 transition-all duration-300 hover:scale-105 hover:bg-blue-600 hover:text-white hover:shadow-lg"
-				>
+				</LinkButton>
+				<LinkButton isPrimary={false} href="/authentication/register">
 					Signup
-				</a>
+				</LinkButton>
 			{/if}
 		</div>
 	</div>

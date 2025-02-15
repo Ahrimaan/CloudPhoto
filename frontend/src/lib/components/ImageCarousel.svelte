@@ -30,9 +30,8 @@
 		currentIndex = (currentIndex - 1 + images.length) % images.length;
 	}
 
-	// Auto-advance carousel
 	onMount(() => {
-		const interval = setInterval(nextImage, 5000);
+		const interval = setInterval(nextImage, 7000);
 		return () => clearInterval(interval);
 	});
 </script>
@@ -68,9 +67,9 @@
 	</button>
 
 	<div class="absolute bottom-4 left-1/2 flex -translate-x-1/2 transform space-x-2">
-		{#each images as _, i}
+		{#each images as _, i }
 			<button
-				class="h-3 w-3 rounded-full {i === currentIndex ? 'bg-white' : 'bg-white bg-opacity-50'}"
+				class="h-3 w-3 rounded-full {i === currentIndex ? 'bg-blue-500' : 'bg-white bg-opacity-50'}"
 				onclick={() => (currentIndex = i)}
 				aria-label="Go to image {i + 1}"
 			></button>
