@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { PUBLIC_APPLICATION_NAME } from '$env/static/public'
 	let { user } = $props();
 </script>
 
@@ -39,7 +40,7 @@
 					<span
 						class="text-2xl font-bold tracking-tight text-gray-800 transition-colors duration-300"
 					>
-						Shutterscape
+						{PUBLIC_APPLICATION_NAME}
 					</span>
 					<span
 						class="text-xs font-medium text-gray-800 transition-colors"
