@@ -1,0 +1,14 @@
+
+
+version: '3.8'
+services:
+  cloudphotobackend:
+    container_name: cloudphotobackend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./pb_data:/pb/pb_data
+    restart: unless-stopped

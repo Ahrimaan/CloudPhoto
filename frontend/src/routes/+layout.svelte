@@ -2,10 +2,12 @@
 	import '../app.css';
 	import Header from '$lib/components/Header.svelte';
 	let { children } = $props();
+	//TODO: Inject User from Store
 	let user = undefined
 </script>
 
 <div class="app">
+	<!-- TODO: Inject User from Store  --> 
 	<Header {user} />
 
 	<main>
