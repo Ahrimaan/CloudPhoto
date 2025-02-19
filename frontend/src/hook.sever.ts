@@ -2,7 +2,9 @@ import type { Handle } from '@sveltejs/kit';
 
 export const handle: Handle = async ({ event , resolve }) => {
     
-    if(event.locals.username && event.url.pathname.includes('login' ))
+    if(event.locals.username) {
+        console.log('User is logged in');
+    }
 
     const response = await resolve(event);
 
